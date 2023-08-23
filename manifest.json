@@ -1,11 +1,11 @@
 {
-  "name": "@theblockchaincoders",
-  "description": "Transfer funds to any wallet",
+  "name": "@futminnawallet",
+  "description": "EVM Compatible wallet",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "favicon.png"
+    "default_icon": "favicon.ico"
   },
   "permissions": ["tabs", "bookmarks", "unlimitedStorage", "nativeMessaging"]
 }
