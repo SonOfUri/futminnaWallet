@@ -206,7 +206,7 @@ function signUp() {
 		console.log("mnemonic:", wallet.mnemonic.phrase);
 		console.log("privateKey:", wallet.privateKey);
 		//API CALL
-		const url = "http://localhost:3000/api/v1/user/signup";
+		const url = "/api/v1/user/signup";
 		const data = {
 			name: name,
 			email: email,
@@ -261,7 +261,7 @@ function login() {
 	const password = document.getElementById("login_password").value;
 
 	//API CALL
-	const url = "http://localhost:3000/api/v1/user/login";
+	const url = "/api/v1/user/login";
 	const data = {
 		email: email,
 		password: password,
@@ -350,7 +350,7 @@ function addToken() {
 	const symbol = document.getElementById("token_symbol").value;
 
 	//API CALL
-	const url = "http://localhost:3000/api/v1/tokens/createtoken";
+	const url = "/api/v1/tokens/createtoken";
 	const data = {
 		name: name,
 		address: address,
@@ -390,7 +390,7 @@ function addAcount() {
 	console.log(wallet.address);
 
 	//API CALL
-	const url = "http://localhost:3000/api/v1/account/createaccount";
+	const url = "/api/v1/account/createaccount";
 	const data = {
 		privateKey: privateKey,
 		address: wallet.address,
@@ -433,7 +433,7 @@ function myFunction() {
 	const accountRender = document.querySelector(".accountList");
 	//API CALL
 
-	fetch("http://localhost:3000/api/v1/tokens/alltoken")
+	fetch("/api/v1/tokens/alltoken")
 		.then((response) => response.json())
 		.then((data) => {
 			let elements = "";
@@ -462,7 +462,7 @@ function myFunction() {
 		});
 
 	//END API CALL
-	fetch("http://localhost:3000/api/v1/account/allaccount")
+	fetch("/api/v1/account/allaccount")
 		.then((response) => response.json())
 		.then((data) => {
 			let accounts = "";
