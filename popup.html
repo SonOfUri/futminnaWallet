@@ -715,6 +715,10 @@
 				copyText.select();
 				document.execCommand('copy');
 				alert('Text copied to clipboard: ' + copyText.value);
+
+				 // Close the modal after copying
+				 const modal = document.getElementById('copyModal');
+            modal.style.display = 'none';
 			}
 		</script>
 		<!-- <script
