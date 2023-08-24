@@ -234,6 +234,19 @@ function signUp() {
 				document.getElementById("center").style.display = "none";
 				document.getElementById("accountData").style.display = "block";
 				document.getElementById("sign_up").style.display = "none";
+				const goHomePageButton = document.getElementById("goHomePage");
+				document.getElementById("warningInfo").innerText =
+					"Ensure you copy and save your mnemonics securely\n\nGo back button would be activated in 10 seconds\n\nAfter clicking go back you cannot recover your account\n\n\nEnsure you copy this data!";
+				goHomePageButton.disabled = true;
+				goHomePageButton.style.opacity = "0.5";
+
+				setTimeout(() => {
+					goHomePageButton.disabled = false;
+					goHomePageButton.style.opacity = "1";
+					goHomePageButton.onclick = () => {
+						location.reload();
+					};
+				}, 10000);
 
 				const userWallet = {
 					address: wallet.address,
@@ -244,7 +257,7 @@ function signUp() {
 				localStorage.setItem("userWallet", jsonObj);
 				document.getElementById("goHomePage").style.display = "block";
 
-				window.location.reload();
+				// window.location.reload();
 			})
 			.catch((error) => {
 				// Handle any errors
