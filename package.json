@@ -3,10 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "node server.js",
-		"lint": "next lint"
+		
+		"start": "node server.js"
 	},
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
