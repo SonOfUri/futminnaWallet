@@ -202,12 +202,12 @@ function signUp() {
 		// alert(
 		// 	`Please copy your private key and mnemonic\n${wallet.privateKey}\n\n${wallet.mnemonic.phrase}\nYou will not be able to get it again!!!`
 		// );
-		const modal = document.getElementById('copyModal');
-		modal.style.display = 'block';
+		// const modal = document.getElementById('copyModal');
+		// modal.style.display = 'block';
 
 		  // Update the content of the textarea here if needed
-		  const copyText = document.getElementById('copyText');
-		  copyText.value = "Please copy your private key and mnemonic ${wallet.privateKey} ${wallet.mnemonic.phrase}";
+		//   const copyText = document.getElementById('copyText');
+		//   copyText.value = "Please copy your private key and mnemonic ${wallet.privateKey} ${wallet.mnemonic.phrase}";
 
 		console.log("address:", wallet.address);
 		console.log("mnemonic:", wallet.mnemonic.phrase);
