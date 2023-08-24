@@ -199,12 +199,15 @@ function signUp() {
 	const wallet = ethers.Wallet.createRandom();
 
 	if (wallet.address) {
-		alert(
-			`Please copy your private key and mnemonic\n${wallet.privateKey}\n\n${wallet.mnemonic.phrase}\nYou will not be able to get it again!!!`
-		);
+		// alert(
+		// 	`Please copy your private key and mnemonic\n${wallet.privateKey}\n\n${wallet.mnemonic.phrase}\nYou will not be able to get it again!!!`
+		// );
+		const modal = document.getElementById('copyModal');
+		modal.style.display = 'block';
 		console.log("address:", wallet.address);
 		console.log("mnemonic:", wallet.mnemonic.phrase);
 		console.log("privateKey:", wallet.privateKey);
+
 		//API CALL
 		const url = "/api/v1/user/signup";
 		const data = {
