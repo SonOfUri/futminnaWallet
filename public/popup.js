@@ -205,7 +205,7 @@ function signUp() {
 		// const modal = document.getElementById('copyModal');
 		// modal.style.display = 'block';
 
-		  // Update the content of the textarea here if needed
+		// Update the content of the textarea here if needed
 		//   const copyText = document.getElementById('copyText');
 		//   copyText.value = "Please copy your private key and mnemonic ${wallet.privateKey} ${wallet.mnemonic.phrase}";
 
