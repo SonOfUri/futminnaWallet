@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
 		},
 	},
 	address: {
-		tyoe: String,
+		type: String,
 		lowercase: true,
 	},
 	private_key: String,
